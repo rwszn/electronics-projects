@@ -1,6 +1,6 @@
 # Microcontroller Control Panel
 
-A DIY control panel using a small OLED display, four push buttons, an LED, and a passive buzzer. The design can be adapted to different microcontroller boards that support the Arduino framework and the required libraries.
+A DIY control panel using a small OLED display, four push buttons, an LED, and a passive buzzer. **This project is designed to be adaptable to different microcontrollers**, rather than being limited to the Arduino Uno. The published sketch uses the Arduino framework, so each target board must support the required framework features and libraries.
 
 ## Current published version
 
@@ -19,7 +19,7 @@ A DIY control panel using a small OLED display, four push buttons, an LED, and a
 
 Version 1.1 uses the Arduino framework's standard `tone()` and `noTone()` functions instead of directly accessing AVR timer registers. This removes the sketch's direct dependency on the Arduino Uno's AVR timer hardware and makes it easier to adapt to many Arduino-compatible boards.
 
-**It is not guaranteed to work unchanged on every microcontroller.** Compatibility depends on the board's Arduino core, pin mapping, I2C implementation, library support, and whether its core supports `tone()`.
+**The project is designed to be adaptable to different microcontrollers, but it is not guaranteed to work unchanged on every board.** Compatibility depends on the board's Arduino core, pin mapping, I2C implementation, library support, and whether its core supports `tone()`.
 
 Potential target boards include Arduino Uno/Nano-class boards, Arduino Mega, ESP32 boards, and Raspberry Pi Pico/RP2040 boards with suitable Arduino cores. Each board still needs its own wiring/pin review and may require small code changes. For boards without a compatible Arduino framework, the sketch must be ported to that platform's APIs.
 
@@ -54,7 +54,7 @@ Potential target boards include Arduino Uno/Nano-class boards, Arduino Mega, ESP
 | Passive buzzer negative (−) | GND |
 | OLED SDA | A4 |
 | OLED SCL/SCK | A5 |
-| OLED VDD | 5V only if the exact module supports 5V |
+| OLED VDD | 5V only if the exact module supports it |
 | OLED GND | GND |
 
 Buttons use `INPUT_PULLUP`; each button connects its input to GND when pressed.
