@@ -2,7 +2,7 @@
 
 A public collection of electronics builds, including project guides, wiring diagrams, source code, and build notes.
 
-This repository is intended for viewers and other makers. It contains project-specific information needed to understand and recreate each build. It does not contain a personal parts inventory, private working notes, AI-assistant context, or private project-management instructions.
+This repository is intended for viewers and other makers. It contains public project guides, diagrams, source code, and relevant build information. Private working notes, personal inventory records, and internal project-management materials are kept separate.
 
 ## Repository layout
 
