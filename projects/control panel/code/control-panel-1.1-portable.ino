@@ -1,3 +1,17 @@
+/*
+  MICROCONTROLLER CONTROL PANEL — VERSION 1.1
+
+  Designed to be adaptable to different microcontrollers that support
+  the Arduino framework and the required libraries.
+
+  This sketch is not guaranteed to work unchanged on every board.
+  Check and adapt pin assignments, I2C support, voltage requirements,
+  library compatibility, and tone() support for the target hardware.
+
+  The pin assignments below are the Arduino Uno R3 reference setup.
+  See the project README for wiring and compatibility details.
+*/
+
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
