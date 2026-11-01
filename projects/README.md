@@ -16,9 +16,3 @@ projects/
       ...
 ```
 
-Project folders should contain only public, project-specific information. Do not add personal inventory records, private notes, AI-assistant files, credentials, or unrelated personal details.
-
-For code updates:
-- Save each update as a new, incremented version file.
-- Keep only the latest three version files in the project's `code/` folder.
-- Update the project README and version history whenever a new version is published.
