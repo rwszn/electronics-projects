@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<defs><style>
+.bg{fill:#f7f8fa}.panel{fill:#fff;stroke:#263445;stroke-width:3;rx:18}.board{fill:#e8f1e8;stroke:#176b42;stroke-width:4;rx:22}
+.h{font: bold 30px Arial,sans-serif;fill:#172536}.sub{font:20px Arial,sans-serif;fill:#334155}.txt{font: bold 19px Arial,sans-serif;fill:#172536}.small{font:17px Arial,sans-serif;fill:#334155}
+.pin{font:bold 18px Arial,sans-serif;fill:#123}.wire{fill:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.sig{stroke:#2563eb}.gnd{stroke:#64748b}.vcc{stroke:#dc7b19}.led{stroke:#16a34a}.buzz{stroke:#9333ea}.btn{stroke:#0891b2}
+</style></defs>
+<rect class="bg" width="1200" height="900"/>
+<text x="600" y="52" text-anchor="middle" class="h">CONTROL PANEL 1.0 — WIRING SCHEMATIC</text>
+<text x="600" y="83" text-anchor="middle" class="sub">Arduino Uno R3 • OLED • 4 buttons • LED • passive buzzer</text>
+<!-- Arduino -->
+<rect x="405" y="180" width="390" height="510" class="board"/>
+<text x="600" y="225" text-anchor="middle" class="h">ARDUINO UNO R3</text>
+<text x="600" y="255" text-anchor="middle" class="small">Digital and power connections</text>
+<g class="pin">
+<text x="445" y="320">D4</text><text x="445" y="370">D5</text><text x="445" y="420">D6</text><text x="445" y="470">D7</text><text x="445" y="530">D8</text><text x="445" y="590">D9</text>
+<text x="680" y="320">A4 / SDA</text><text x="680" y="370">A5 / SCL</text><text x="680" y="530">5V</text><text x="680" y="590">GND</text>
+</g>
+<!-- left button box -->
+<rect x="35" y="260" width="270" height="270" class="panel"/>
+<text x="170" y="300" text-anchor="middle" class="h">PUSH BUTTONS</text>
+<text x="65" y="350" class="txt">OK</text><text x="65" y="395" class="txt">DOWN</text><text x="65" y="440" class="txt">UP</text><text x="65" y="485" class="txt">POWER</text>
+<text x="145" y="350" class="small">D4 → button → GND</text><text x="145" y="395" class="small">D5 → button → GND</text><text x="145" y="440" class="small">D6 → button → GND</text><text x="145" y="485" class="small">D7 → button → GND</text>
+<path d="M305 345 H365 V315 H405 M305 390 H350 V365 H405 M305 435 H335 V415 H405 M305 480 H320 V465 H405" class="wire btn"/>
+<!-- led -->
+<rect x="35" y="610" width="270" height="145" class="panel"/>
+<text x="170" y="650" text-anchor="middle" class="h">LED</text>
+<text x="65" y="695" class="small">D8 → 220Ω resistor</text><text x="65" y="725" class="small">→ LED anode; cathode → GND</text>
+<path d="M305 680 H350 V525 H405" class="wire led"/>
+<!-- buzzer -->
+<rect x="895" y="260" width="270" height="145" class="panel"/>
+<text x="1030" y="300" text-anchor="middle" class="h">PASSIVE BUZZER</text>
+<text x="925" y="350" class="small">Positive (+) → D9</text><text x="925" y="380" class="small">Negative (−) → GND</text>
+<path d="M795 585 H850 V345 H895" class="wire buzz"/>
+<!-- OLED -->
+<rect x="895" y="500" width="270" height="230" class="panel"/>
+<text x="1030" y="545" text-anchor="middle" class="h">0.96-inch OLED</text>
+<text x="925" y="595" class="small">SDA → A4</text><text x="925" y="630" class="small">SCL/SCK → A5</text><text x="925" y="665" class="small">VDD → 5V*</text><text x="925" y="700" class="small">GND → GND</text>
+<path d="M795 315 H845 V590 H895 M795 365 H860 V625 H895 M795 525 H875 V660 H895 M795 585 H885 V700 H895" class="wire sig"/>
+<!-- legends -->
+<rect x="35" y="790" width="1130" height="75" class="panel"/>
+<text x="60" y="825" class="txt">Important:</text>
+<text x="180" y="825" class="small">Buttons use INPUT_PULLUP: each switch connects its Arduino pin to GND when pressed.</text>
+<text x="60" y="852" class="small">*Only connect OLED VDD to 5V if your specific OLED module supports 5V. Check its labels/specification.</text>
+</svg>
